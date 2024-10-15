@@ -1,0 +1,10 @@
+image: alpine/edge
+secrets:
+  - 7b9b5ca7-0b3a-4a35-acbb-416fe5aa43d9
+packages:
+  - rsync
+tasks:
+  - deploy: |
+      cd liskvork.org
+      rsync --rsh="ssh -o StrictHostKeyChecking=no -i ~/.ssh/7b9b5ca7-0b3a-4a35-acbb-416fe5aa43d9" -rzP liskvork.org/ liskvork@mirai.server.kreog.com:liskvork.org/
+
