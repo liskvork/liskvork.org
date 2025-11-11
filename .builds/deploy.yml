@@ -8,6 +8,8 @@ environment:
 secrets:
     - 1de91367-132e-4d0b-865a-3b4fc621f8f1
     - 38d06266-17a7-4fde-a067-3172d4afb2f7
+sources:
+    - https://git.sr.ht/~emneo/liskvork.org
 tasks:
     - check-branch: | 
         cd $repo
